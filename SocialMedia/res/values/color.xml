@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="twitter">#00aced</color>
+    <color name="facebook">#3b5998</color>
+    <color name="googleplus">#dd4b39</color>
+    <color name="pintrest">#cb2027</color>
+    <color name="linkedin">#007bb6</color>
+ 	<color name="silver">#BFBFBF</color>
+     <color name="white">#ffffff</color>
+ 	<color name="instagram">#517fa4</color>
+     <color name="yahoo">#fe7a15</color>
+     <color name="flickr">#ff0084</color>
+     
+</resources>

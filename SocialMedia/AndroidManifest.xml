@@ -8,12 +8,29 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
+        
+        
+        <meta-data 
+            android:name="com.google.android.gms.version"
+            android:value="@integer/maxValue"/>
+        
+          <meta-data 
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBRRGPBN_ZCj37ypJ4iW6eOxtiMirA2mYU"/>
+         <activity
             android:name="com.osi.socialmedia.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -21,7 +38,29 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+            </activity>
+         <activity
+            android:name="com.osi.socialmedia.SocialMediaActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="oauth" android:host="com.osi.socialmedia"  />
+            </intent-filter>
+            </activity>   
+         
+        
+        
+       <!--  <activity android:name=".TwitterActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="oauth" android:host="com.osi.socialmedia"  />
+            </intent-filter>
+        </activity>  -->
     </application>
 
 </manifest>
